@@ -1,0 +1,50 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">系统设置</a></li>
+    <li class="active"><a href="#/userlist">密码重置</a></li>
+</ol><!-- 面包导航栏结束 -->
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">密码重置</h3>
+    </div>
+    <div class="panel-body">
+
+        <!-- 警告框 -->
+        <div class="alert alert-success alert-dismissible hiden" role="alert">
+            <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <strong>成功!</strong> 密码修改成功
+        </div>
+
+        <!-- 水平表单|简单版 -->
+        <form class="form-horizontal" id="myForm"  role="form" method="post">
+            <div class="form-group ">
+                <label for="name" class="col-sm-2 control-label">原密码</label>
+                <div class="col-sm-5  ">
+                    <input type="text" class="form-control" id="name" placeholder="请输入姓名">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="col-sm-2 control-label">新密码</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" id="pwd" placeholder="请输入新密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email" class="col-sm-2 control-label">新密码</label>
+                <div class="col-sm-5">
+                    <input type="password" class="form-control" id="email" placeholder="请输入新密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-5">
+                    <button type="button" class="btn btn-default"  >提交</button>
+                </div>
+            </div>
+        </form><!-- 水平表单结束 -->
+
+
+
+    </div>
+</div><!-- 面板结束 -->
+

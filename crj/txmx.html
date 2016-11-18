@@ -1,0 +1,278 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">出入金管理</a></li>
+    <li class="active"><a href="#/userlist">提现明细</a></li>
+</ol><!-- 面包导航栏结束 -->
+
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">提现明细列表</h3>
+    </div>
+    <div class="panel-body">
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">合计:&nbsp;&nbsp;
+                   <span><strong>充值成功金额/成功笔数:2500/16</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span><strong>提现成功金额/成功笔数:5090.4/9</strong></span>&nbsp;&nbsp;&nbsp;&nbsp;
+                   <span><strong>提现手续费:0.00</strong></span>
+                    </h3>
+            </div>
+
+            <div class="panel-body">
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label for="zhse">所属会员:</label>
+                        <select class="form-control" id="zhse" style="width: 160px;">
+                            <option>王大伟</option>
+                            <option selected>李晓明</option>
+                            <option>康小美</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dlsse">所属代理商:</label>
+                        <select class="form-control" name="pwd" id="dlsse" style="width: 160px;">
+                            <option>皇室代理商</option>
+                            <option selected>明堂代理商</option>
+                            <option>贝姆代理商</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">所属经纪人:</label>
+                        <input type="email" class="form-control" style="width:160px;" id="exampleInputEmail3"
+                               placeholder="支持模糊查询">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">经纪人电话:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询"
+                               style="width:160px;">
+                    </div>
+                </form><!-- 内联表单结束 -->
+                <br/>
+                <form class="form-inline" role="form" method="post">
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">客户姓名:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询"
+                               style="width:160px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">客户电话:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询"
+                               style="width:160px;">
+                    </div>
+
+                </form>
+                <br/>
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="" for="head-datetimepicker">开始时间:</label>
+                        <div class='input-group date ' id="head-datetimepicker">
+                            <input type='text' class="form-control col-sm-6" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="head-datetimepicker">结束时间:</label>
+                        <div class='input-group date ' id="tail-datetimepicker">
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                </form><!-- 内联表单结束 -->
+
+               <br/>
+
+                <form class="form-inline" role="form" method="post">
+                    <div class="form-group">
+                        <label class="">处理结果:</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="yingkui" value="option1" checked> 成功
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="yingkui" value="option2"> 失败
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="yingkui" value="option2"> 等待付款
+                        </label>
+                    </div>
+                    <div class="form-group " >
+                        <label class="">操作类型:</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="one" value="option1" checked> 充值
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="one" value="option2"> 提现
+                        </label>
+                    </div>
+                    </form>
+                <br/>
+
+                <form class="form-inline" role="form" method="post">
+                    <div class="form-group " >
+                        <label class="">转账类型:</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="two" value="option1" checked> 微信
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="two" value="option2"> 银联
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="two" value="option2"> 其他
+                        </label>
+                    </div>
+                    <div class="form-group " >
+                        <label class="">提现类型:</label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="three" value="option1" checked> 账户
+                        </label>
+                        <label class="checkbox-inline">
+                            <input type="checkbox" class="icheck" name="three" value="option2"> 佣金
+                        </label>
+                    </div>
+                    <div class="form-group col-sm-offset-1">
+                        <button type="button" class="btn btn-primary">查询</button>
+                        <button type="button" class="btn btn-default">重置</button>
+                    </div>
+
+                </form>
+                <br/>
+
+            </div>
+        </div>
+        <!-- 面板结束 -->
+
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped" border="1">
+                <thead>
+                <tr class="danger text-center">
+                    <td>序号</td>
+                    <td>客户姓名</td>
+                    <td>客户手机</td>
+                    <td>流水号</td>
+                    <td>转账渠道</td>
+                    <td>操作类型</td>
+                    <td>提现类型</td>
+                    <td>金额</td>
+                    <td>手续费</td>
+                    <td>处理结果</td>
+                    <td>审核时间</td>
+                    <td>代理商</td>
+
+                </tr>
+                </thead>
+                <tr class="text-center">
+                    <td>00089</td>
+                    <td>赵大海</td>
+                    <td>15869359865</td>
+                    <td>89SAG25GAAF</td>
+                    <td>微信转账</td>
+                    <td>提现</td>
+                    <td>佣金</td>
+                    <td>5000</td>
+                    <td>2</td>
+                    <td>成功</td>
+                    <td>2016-09-29 19:54:21</td>
+                    <td>辉煌代理商</td>
+                </tr>
+                <tr ng-repeat="g in goodsList | orderBy:'id'" class="text-center">
+                    <td> {{g.id}}</td>
+                    <td> {{g.name}}</td>
+                    <td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 分页控件 -->
+        <nav class="text-right">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav><!-- 分页结束 -->
+
+    </div>
+    <div class="panel-footer">
+
+        <div ui-view=""></div>
+
+    </div>
+
+    <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定通过吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                            ng-click="delete(deleteModel)">确定
+                    </button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->
+
+
+</div><!-- 面板结束 -->
+
+
+<script type="text/javascript">
+    $(function () {
+        var today = new Date();
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+        $('#head-datetimepicker').datetimepicker({
+            inline: true,
+            sideBySide: true,
+            defaultDate: today,
+            locale: 'ru',
+            format: 'YYYY-MM-DD HH:mm:SS'
+        });
+        $('#tail-datetimepicker').datetimepicker({
+            sideBySide: true,
+            inline: true,
+            defaultDate: new Date(),
+            locale: 'ru',
+            format: 'YYYY-MM-DD HH:mm:SS'
+        });
+        $('.icheck').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+
+
+
+
+
+

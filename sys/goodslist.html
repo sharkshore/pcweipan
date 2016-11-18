@@ -1,0 +1,91 @@
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success" >
+    <div class="panel-heading">
+        <h3 class="panel-title">商品列表</h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover table-striped" border="1">
+                <thead>
+                <tr class="danger text-center">
+                    <td>商品ID</td>
+                    <td>商品名</td>
+                    <td>商品类型</td>
+                    <td>盈利率比例</td>
+                    <td>交易开始时间</td>
+                    <td>交易结束时间</td>
+                    <td>编辑</td>
+                </tr>
+                </thead>
+                <tr class="text-center">
+                    <td>1</td>
+                    <td>5M</td>
+                    <td>黄金</td>
+                    <td>0.25</td>
+                    <td>09:00:00</td>
+                    <td>18:00:00</td>
+                    <td>
+                        <a class="btn btn-primary" ui-sref="weipan.goods.detail"
+                           ng-click="deleteParam(g)" rel="nofollow">修改</a>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>
+                <tr ng-repeat="g in goodsList | orderBy:'id'" class="text-center">
+                    <td> {{g.id}}</td>
+                    <td> {{g.name}}</td>
+                    <td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 分页控件 -->
+        <nav class="text-right">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav><!-- 分页结束 -->
+    </div>
+    <div class="panel-footer">
+        <a  ui-sref="weipan.goods.detail" class="btn btn-info btn-sm">
+            <i class="glyphicon glyphicon-edit"></i>添加新商品
+        </a>
+    </div>
+
+    <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定删除吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                            ng-click="delete(deleteModel)">确定
+                    </button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->
+
+
+    <div ui-view=""></div>
+
+</div><!-- 面板结束 -->
+
+

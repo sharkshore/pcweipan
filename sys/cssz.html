@@ -1,0 +1,101 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">系统设置</a></li>
+    <li class="active"><a href="#/userlist">参数设置</a></li>
+</ol><!-- 面包导航栏结束 -->
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">参数设置</h3>
+    </div>
+    <div class="panel-body">
+
+
+        <!--  &lt;!&ndash; 内联表单|一行 &ndash;&gt;
+          <form class="form-inline col-md-offset-2" role="form" method="post">
+              <div class="form-group ">
+                  <label class="" for="exampleInputEmail3">自动提现水平线:</label>
+                  <input type="text" class="form-control"  ng-model="" >
+              </div>
+              <a  class="btn btn-info btn-sm" data-target="#deleteModal" data-toggle="modal">
+                  <i class="glyphicon glyphicon-edit"></i>修改
+              </a>
+          </form>&lt;!&ndash; 内联表单结束 &ndash;&gt;
+          <br/>-->
+
+        <!-- 内联表单|一行 -->
+        <form class="form-inline col-md-offset-2" role="form" method="post">
+            <div class="form-group ">
+                <label class="" for="exampleInputEmail3">出金最大单笔金:</label>
+                <input type="text" class="form-control" id="" ng-model="">
+            </div>
+            <a ng-click="insert(insertModel)" class="btn btn-info btn-sm" data-target="#deleteModal"
+               data-toggle="modal">
+                <i class="glyphicon glyphicon-edit"></i>修改
+            </a>
+        </form><!-- 内联表单结束 -->
+        <br/>
+        <!-- 内联表单|一行 -->
+        <form class="form-inline col-md-offset-2" role="form" method="post">
+            <div class="form-group ">
+                <label class="" for="exampleInputEmail3">最低提现水平线:</label>
+                <input type="text" class="form-control" id="" ng-model="">
+            </div>
+            <a ng-click="insert(insertModel)" class="btn btn-info btn-sm" data-target="#deleteModal"
+               data-toggle="modal">
+                <i class="glyphicon glyphicon-edit"></i>修改
+            </a>
+        </form><!-- 内联表单结束 -->
+        <br/>
+
+        <!-- 内联表单|一行 -->
+        <form class="form-inline col-md-offset-2" role="form" method="post">
+            <div class="form-group ">
+                <label class="" for="exampleInputEmail3">二级分销佣金比:</label>
+                <input type="text" class="form-control" ng-model="">
+            </div>
+            <a ng-click="insert(insertModel)" class="btn btn-info btn-sm" data-target="#deleteModal"
+               data-toggle="modal">
+                <i class="glyphicon glyphicon-edit"></i>修改
+            </a>
+        </form><!-- 内联表单结束 -->
+        <br/>
+
+        <!-- 内联表单|一行 -->
+        <form class="form-inline col-md-offset-2" role="form" method="post">
+            <div class="form-group ">
+                <label class="" for="exampleInputEmail3">单笔下单最大额:</label>
+                <input type="text" class="form-control" id="exampleInputEmail3" ng-model="">
+            </div>
+            <a ng-click="insert(insertModel)" class="btn btn-info btn-sm" data-target="#deleteModal"
+               data-toggle="modal">
+                <i class="glyphicon glyphicon-edit"></i>修改
+            </a>
+        </form><!-- 内联表单结束 -->
+        <br/>
+
+
+        <!-- 弹出删除确认框 -->
+        <!-- 默认先接受点击事件,再弹出模态框 -->
+        <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">确定删除吗</h4>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                                ng-click="delete(deleteModal)">确定
+                        </button>
+                        <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                    </div>
+                </div>
+            </div>
+        </div><!-- 模态框结束 -->
+
+    </div>
+</div><!-- 面板结束 -->
+
+

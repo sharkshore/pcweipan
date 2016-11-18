@@ -1,0 +1,107 @@
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h4 class="panel-title">管理员权限</h4>
+    </div>
+    <div class="panel-body">
+
+       <h4>
+           <span class="label label-danger">出入金管理</span>
+       </h4>
+
+
+        <!-- 复选框组|一行 -->
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> 出入金审核
+        </label>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox2" value="option2"> 出入金明细
+        </label>
+        <br/>
+        <hr/>
+
+
+        <h4>
+            <span class="label label-primary">仓单明细</span>
+        </h4>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 平仓单明细
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 持仓单明细
+        </label>
+        <br/>
+        <hr/>
+
+        <h4>
+            <span class="label label-danger">佣金管理</span>
+        </h4>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 佣金明细
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 经纪人佣金
+        </label>
+        <br/>
+        <hr/>
+
+        <h4>
+            <span class="label label-primary">人员管理</span>
+        </h4>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 佣金明细
+        </label>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 经纪人佣金
+        </label>
+        <br/>
+        <hr/>
+
+
+        <h4>
+            <span class="label label-warning">系统设置</span>
+        </h4>
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 佣金明细
+        </label>
+
+
+        <label class="checkbox-inline">
+            <input type="checkbox"  value="option2"> 经纪人佣金
+        </label>
+        <br/>
+
+
+
+
+
+    </div>
+    <div class="panel-footer">
+        <a href="" data-toggle="modal" data-target="#updateModal" class="btn btn-primary " > 修改 </a>
+        <a href="" data-toggle="modal" data-target="#updateModal" class="btn btn-primary " > 返回 </a>
+    </div>
+</div><!-- 面板结束 -->
+
+ <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定修改吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal" ng-click="delete(deleteModel)">确定</button>
+                    <button type="button" class="btn btn-primary "data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>东方微盘管理平台</title>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+
+    <script src="//cdn.bootcss.com/jquery/1.11.1/jquery.js"></script>
+
+    <style>
+        body {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: #eee;
+            background: url("images/shanghaibeijing.jpg");
+            background-repeat: no-repeat;
+        }
+
+        .form-signin {
+            max-width: 330px;
+            padding: 15px;
+            margin: 200px 0 0 800px;
+        }
+
+        .form-signin .form-signin-heading,
+        .form-signin .checkbox {
+            margin-bottom: 10px;
+        }
+
+        .form-signin .checkbox {
+            font-weight: normal;
+        }
+
+        .form-signin .form-control {
+            position: relative;
+            height: auto;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .form-signin .form-control:focus {
+            z-index: 2;
+        }
+
+        .form-signin input[type="email"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+        .form-signin input[type="password"] {
+            margin-bottom: 10px;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
+        #logo {
+            background: url('http://static-res.ruyo.net/ruyo_net_w_32.png') no-repeat 10px 8px;
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 50px;
+            display: inline-block;
+            font-family: 微软雅黑;
+            font-weight: bold;
+        }
+
+    </style>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //点击
+            $("#login").click(function () {
+                var username = $("#username").val();
+                var pwd = $("#pwd").val();
+                if (username != 'admin' || pwd != '123456') {
+                    alert('您的用户名或者密码输入错误');
+                } else {
+                    location.href = '/pcweipan/index.html#/weipan/hello';
+                }
+            });
+
+        });//jquery结尾
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1 id="logo">东方微盘管理系统</h1>
+
+    <!-- <form class="form-signin" role="form">
+         <h2 class="form-signin-heading">请登陆</h2>
+         <input type="text" id="username" class="form-control" placeholder="用户名" required autofocus>
+         <input type="password" id="pwd" class="form-control" placeholder="密码" required>
+         <div class="checkbox">
+             <label>
+                 <input type="checkbox" value="remember-me">记住我
+             </label>
+         </div>
+         <button id="login" class="btn btn-lg btn-primary btn-block" type="button" >登陆</button>
+     </form>-->
+
+    <!-- 容器 -->
+
+
+</div> <!-- /container -->
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="row">
+    <!--<div class="col-sm-2 col-sm-offset-8"><h2><strong>请登录</strong></h2></div>-->
+</div>
+
+
+
+
+<div class="container">
+
+    <!-- 水平表单|简单版 -->
+    <form class="form-horizontal" id="myForm"  role="form" method="post" >
+        <div class="form-group ">
+            <label for="name"  class="col-sm-2 col-sm-offset-6 control-label input-lg"><strong>用户名</strong></label>
+            <div class="col-sm-3  ">
+                <input type="text" id="username" class="form-control input-lg" id="name" placeholder="">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="pwd"  class="col-sm-2 col-sm-offset-6 control-label input-lg"><strong>密码</strong></label>
+            <div class="col-sm-3">
+                <input type="password" id="pwd" class="form-control input-lg" id="pwd" placeholder="">
+            </div>
+        </div>
+        <br/>
+        <div class="form-group">
+            <div class=" col-sm-2 col-sm-offset-8">
+                <button type="button" id="login" class="btn btn-primary input-lg">登陆</button>
+                <button type="reset" class="btn btn-default input-lg">清空</button>
+            </div>
+        </div>
+    </form><!-- 水平表单结束 -->
+
+
+</div><!-- 容器结束 -->
+
+
+</body>
+</html>
+
+

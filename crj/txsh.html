@@ -1,0 +1,126 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">出入金管理</a></li>
+    <li class="active"><a href="#/userlist">提现审核</a></li>
+</ol><!-- 面包导航栏结束 -->
+
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">提现审核列表</h3>
+    </div>
+    <div class="panel-body">
+
+
+        <!-- 面板结束 -->
+
+
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover table-striped table-condensed" border="1">
+                <thead>
+                <tr class="danger text-center">
+                    <td>序号</td>
+                    <td>姓名</td>
+                    <td>手机号码</td>
+                    <td>提现类型</td>
+                    <td>提现手续费</td>
+                    <td>申请时间</td>
+                    <td>金额</td>
+                    <td>经纪人</td>
+                    <td>代理商</td>
+                    <td>综合会员</td>
+                    <td>详情</td>
+                    <td>操作</td>
+                </tr>
+                </thead>
+                <tr class="text-center">
+                    <td>00089</td>
+                    <td>赵大海</td>
+                    <td>15869359865</td>
+                    <td>佣金提现</td>
+                    <td>1.00</td>
+                    <td>2016-10-30 14:52:38</td>
+                    <td>5400</td>
+                    <td>李明霞</td>
+                    <td>辉煌代理商</td>
+                    <td>黄明</td>
+                    <td>
+                        <a class="btn btn-info" ui-sref=".crjdetail" ng-click="detail(user)" rel="nofollow">查看详情</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-info" data-target="#deleteModal" data-toggle="modal" rel="nofollow">通过</a>
+                        <a class="btn btn-danger" data-target="#deleteModal" data-toggle="modal" rel="nofollow">拒绝</a>
+                    </td>
+                </tr>
+<!--                <tr ng-repeat="g in goodsList | orderBy:'id'" class="text-center">
+                    <td> {{g.id}}</td>
+                    <td> {{g.name}}</td>
+                    <td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>-->
+            </table>
+
+        </div>
+        <!-- 分页控件 -->
+        <nav class="text-right">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav><!-- 分页结束 -->
+
+    </div>
+    <div class="panel-footer">
+
+        <div ui-view=""></div>
+
+    </div>
+
+    <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定通过吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                            ng-click="delete(deleteModel)">确定
+                    </button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->
+
+
+</div><!-- 面板结束 -->
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.datetimepicker').datetimepicker({
+            locale: 'ru'
+            sideBySide: true,
+            inline: true,
+        });
+    });
+</script>
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2 sidebar" id="sidebar" >
+            <ul id="main-nav" class="main-nav nav nav-tabs nav-stacked" >
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-th-large"></i>
+                        首页
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#inoutSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-usd"></i>
+                        出入金管理
+                        <span class="pull-right glyphicon  glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="inoutSetting" class="nav nav-list secondmenu collapse ">
+                        <li ui-sref=".crjsh"ui-sref-active="active"><a ><i class="glyphicon glyphicon-usd"></i>&nbsp;提现审核</a></li>
+                        <li ui-sref=".crjlist"ui-sref-active="active"><a ><i class="glyphicon glyphicon-gbp"></i>&nbsp;提现明细</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#storeSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-tasks"></i>
+                        仓单明细
+                        <span class="pull-right glyphicon  glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="storeSetting" class="nav nav-list secondmenu collapse ">
+                        <li ui-sref=".pcdmx"ui-sref-active="active"><a ><i class="glyphicon glyphicon-tasks"></i>&nbsp;平仓单明细</a></li>
+                        <li ui-sref=".ccdmx"ui-sref-active="active"><a ><i class="glyphicon glyphicon-tasks"></i>&nbsp;持仓单明细</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#moneySetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-credit-card"></i>
+                        佣金管理
+                        <span class="pull-right glyphicon  glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="moneySetting" class="nav nav-list secondmenu collapse ">
+                        <li ui-sref=".yjmx"ui-sref-active="active"><a ><i class="glyphicon glyphicon-star"></i>&nbsp;佣金明细</a></li>
+                       <!-- <li ui-sref=".yjhz"ui-sref-active="active" class="sr-only"><a ><i class="glyphicon glyphicon-text-width"></i>&nbsp;佣金汇总</a></li>-->
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#userSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-user"></i>
+                        人员管理
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="userSetting" class="nav nav-list secondmenu collapse in ">
+                        <li ui-sref=".zhhy"ui-sref-active="active"><a ><i class="glyphicon glyphicon-user"></i>&nbsp;综合会员</a></li>
+                        <li ui-sref=".dls"ui-sref-active="active"><a ><i class="glyphicon glyphicon-user"></i>&nbsp;代理商户</a></li>
+                        <li ui-sref=".jjr.jjrlist"ui-sref-active="active"><a ><i class="glyphicon glyphicon-user"></i>&nbsp;经纪人员</a></li>
+                        <li ui-sref=".khgl"ui-sref-active="active"><a ><i class="glyphicon glyphicon-user"></i>&nbsp;客户管理</a></li>
+                       <!-- <li ui-sref=".zhbb"ui-sref-active="active" class="sr-only"><a ><i class="glyphicon glyphicon-list-alt"></i>&nbsp;综合报表</a></li>-->
+                        <li ui-sref=".ykph"ui-sref-active="active"><a ><i class="glyphicon glyphicon-list-alt"></i>&nbsp;盈亏排行</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#sysSetting" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        系统设置
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="sysSetting" class="nav nav-list secondmenu collapse">
+                        <li ui-sref=".cssz" ui-sref-active="active"><a  ><i class="glyphicon glyphicon-tint"></i>&nbsp;参数设置</a></li>
+                        <li ui-sref=".goods.typelist" ui-sref-active="active"><a  ><i class="glyphicon glyphicon-glass"></i>&nbsp;商品管理</a></li>
+                        <li ui-sref=".qxgl.qxgldetail" ui-sref-active="active" ><a ><i class="glyphicon glyphicon-euro"></i>&nbsp;权限管理</a></li>
+                        <li ui-sref-active="active" ui-sref=".mmcz" ><a ><i class="glyphicon glyphicon-refresh"></i>&nbsp;密码重置</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="glyphicon glyphicon-fire"></i>
+                        关于系统
+                        <span class="badge pull-right">1</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-10">
+            <!-- 容器 -->
+            <div ui-view=""></div>
+        </div>
+    </div>
+</div>

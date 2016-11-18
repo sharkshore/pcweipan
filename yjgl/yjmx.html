@@ -1,0 +1,214 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">佣金管理</a></li>
+    <li class="active"><a href="#/userlist">佣金明细</a></li>
+</ol><!-- 面包导航栏结束 -->
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">佣金明细列表</h3>
+    </div>
+    <div class="panel-body">
+
+
+
+        <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title">佣金总额:1088</h3>
+            </div>
+
+            <div class="panel-body">
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label for="zhse">所属会员:</label>
+                        <select class="form-control" id="zhse" style="width: 160px;">
+                            <option>王大伟</option>
+                            <option selected>李晓明</option>
+                            <option>康小美</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dlsse">所属代理商:</label>
+                        <select class="form-control" name="pwd" id="dlsse" style="width: 160px;">
+                            <option>皇室代理商</option>
+                            <option selected>明堂代理商</option>
+                            <option>贝姆代理商</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">所属经纪人:</label>
+                        <input type="email" class="form-control" style="width:160px;" id="exampleInputEmail3"
+                               placeholder="支持模糊查询">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">经纪人电话:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询"
+                               style="width:160px;">
+                    </div>
+                </form><!-- 内联表单结束 -->
+                <br/>
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="" >客户姓名:</label>
+                        <input class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询" style="width: 160px;">
+                    </div>
+                    <div class="form-group">
+                        <label class="" >客户手机:</label>
+                        <input class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询" style="width: 160px;">
+                    </div>
+
+                </form>
+                <br/>
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="" for="head-datetimepicker">开始时间:</label>
+                        <div class='input-group date ' id="head-datetimepicker">
+                            <input type='text' class="form-control col-sm-6" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="head-datetimepicker">结束时间:</label>
+                        <div class='input-group date ' id="tail-datetimepicker">
+                            <input type='text' class="form-control" />
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-offset-1">
+                        <button type="button" class="btn btn-primary">查询</button>
+                        <button type="button" class="btn btn-default">重置</button>
+                    </div>
+                </form><!-- 内联表单结束 -->
+
+
+            </div>
+        </div><!-- 面板结束 -->
+
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover table-striped" border="1">
+                <thead>
+                <tr class="danger text-center">
+                    <td>单号</td>
+                    <td>姓名</td>
+                    <td>手机号码</td>
+                    <td>产品</td>
+                    <td>金额</td>
+                    <td>佣金</td>
+                    <td>购买时间</td>
+                    <td>经纪人</td>
+                    <td>代理商</td>
+                    <td>综合会员</td>
+                </tr>
+                </thead>
+                <tr class="text-center">
+                    <td>8SG2-HFG62G</td>
+                    <td>白小美</td>
+                    <td>15487652548</td>
+                    <td>黄金2M</td>
+                    <td>2000</td>
+                    <td>40</td>
+                    <td>2016-10-29 15:49:00</td>
+                    <td>张敏</td>
+                    <td>牛掰代理商</td>
+                    <td>黄伟</td>
+                </tr>
+                <tr ng-repeat="g in goodsList | orderBy:'id'" class="text-center">
+                    <td> {{g.id}}</td>
+                    <td> {{g.name}}</td>
+                    <td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 分页控件 -->
+        <nav class="text-right">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav><!-- 分页结束 -->
+
+    </div>
+
+    <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定删除吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                            ng-click="delete(deleteModel)">确定
+                    </button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->
+
+
+    <div ui-view=""></div>
+
+</div><!-- 面板结束 -->
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        var today = new Date();
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+        $('#head-datetimepicker').datetimepicker({
+            sideBySide: true,
+            inline: true,
+            defaultDate: today,
+            locale: 'ru',
+            format: 'YYYY-MM-DD HH:mm:SS'
+        });
+        $('#tail-datetimepicker').datetimepicker({
+            sideBySide: true,
+            inline: true,
+            defaultDate: new Date(),
+            locale: 'ru',
+            format: 'YYYY-MM-DD HH:mm:SS'
+        });
+        $('.icheck').iCheck({
+            checkboxClass: 'icheckbox_square-blue',
+            radioClass: 'iradio_square-blue',
+            increaseArea: '20%' // optional
+        });
+    });
+</script>
+
+
+
+
+

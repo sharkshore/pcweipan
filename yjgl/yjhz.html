@@ -1,0 +1,195 @@
+<ol class="breadcrumb">
+    <li><a href="#">首页</a></li>
+    <li><a href="#/hello">佣金管理</a></li>
+    <li class="active"><a href="#/userlist">佣金汇总</a></li>
+</ol><!-- 面包导航栏结束 -->
+<!-- 面板|带标题带脚 -->
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">经纪人佣金汇总列表</h3>
+    </div>
+    <div class="panel-body">
+
+
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label for="zhse">综合会员:</label>
+                        <select class="form-control" id="zhse" style="width: 240px;">
+                            <option>王大伟</option>
+                            <option selected>李晓明</option>
+                            <option>康小美</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dlsse">代理商户:</label>
+                        <select class="form-control" name="pwd" id="dlsse" style="width: 240px;">
+                            <option>皇室代理商</option>
+                            <option selected>明堂代理商</option>
+                            <option>贝姆代理商</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">经纪人姓名:</label>
+                        <input type="email" class="form-control" style="width:240px;" id="exampleInputEmail3"
+                               placeholder="支持模糊查询">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">经纪人电话:</label>
+                        <input type="email" class="form-control" id="exampleInputEmail3" placeholder="支持模糊查询"
+                               style="width:240px;">
+                    </div>
+                </form><!-- 内联表单结束 -->
+                <br/>
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">佣金总额:</label>
+                        <input type="text" class="form-control" id="exampleInputEmail3" style="width:240px;"
+                               placeholder="最小值">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputPassword3"><span
+                                style="text-decoration:line-through;margin-left: 17px;margin-right:17px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+                        <input class="form-control" id="exampleInputEmail3" placeholder="最大值" style="width:240px;">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputEmail3">发展客户数:</label>
+                        <input type="text" class="form-control" id="exampleInputEmail3" style="width:240px;"
+                               placeholder="最小值">
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputPassword3"><span
+                                style="text-decoration:line-through;margin-left: 25px;margin-right:25px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></label>
+                        <input class="form-control" id="exampleInputEmail3" placeholder="最大值" style="width:240px;">
+                    </div>
+                </form>
+                <br/>
+
+                <form class="form-inline" role="form" method="post">
+
+                    <div class="form-group">
+                        <label class="" for="exampleInputPassword3">开始时间:</label>
+                        <div class='input-group date datetimepicker' id="exampleInputPassword3">
+                            <input type='text' class="form-control col-sm-6" style="width:200px"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="" for="exampleInputPassword3">结束时间:</label>
+                        <div class='input-group date datetimepicker' id="exampleInputPassword3">
+                            <input type='text' class="form-control" style="width:200px"/>
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-sm-offset-1">
+                        <button type="button" class="btn btn-primary">查询</button>
+                        <button type="button" class="btn btn-default">重置</button>
+                    </div>
+                </form><!-- 内联表单结束 -->
+
+
+            </div>
+        </div><!-- 面板结束 -->
+
+
+        <div class="table-responsive">
+
+            <table class="table table-bordered table-hover table-striped" border="1">
+                <thead>
+                <tr class="danger text-center">
+                    <td>经纪人姓名</td>
+                    <td>电话</td>
+                    <td>佣金总额</td>
+                    <td>发展客户数</td>
+                    <td>代理商</td>
+                    <td>综合会员</td>
+                </tr>
+                </thead>
+                <tr class="text-center">
+                    <td>张超</td>
+                    <td>15869359865</td>
+                    <td>8900</td>
+                    <td>23</td>
+                    <td>明黄代理商</td>
+                    <td>黄大炜</td>
+                </tr>
+                <tr ng-repeat="g in goodsList | orderBy:'id'" class="text-center">
+                    <td> {{g.id}}</td>
+                    <td> {{g.name}}</td>
+                    <td>
+                        <a class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"
+                           ng-click="deleteParam(g)" rel="nofollow">删除</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!-- 分页控件 -->
+        <nav class="text-right">
+            <ul class="pagination">
+                <li><a href="#">&laquo;</a></li>
+                <li class="active"><a href="#">1</a></li>
+                <li class="disabled"><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li><a href="#">&raquo;</a></li>
+            </ul>
+        </nav><!-- 分页结束 -->
+
+    </div>
+
+    <!-- 弹出删除确认框 -->
+    <!-- 默认先接受点击事件,再弹出模态框 -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">确定删除吗</h4>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                            ng-click="delete(deleteModel)">确定
+                    </button>
+                    <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div><!-- 模态框结束 -->
+
+
+    <div ui-view=""></div>
+
+</div><!-- 面板结束 -->
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.datetimepicker').datetimepicker({
+            sideBySide: true,
+            inline: true,
+            locale: 'ru'
+        });
+    });
+</script>
+
+
+
+
+
+
+

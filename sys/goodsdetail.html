@@ -1,0 +1,120 @@
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h3 class="panel-title">{{}}商品</h3>
+    </div>
+    <div class="panel-body">
+
+        <!-- 水平表单|简单版 -->
+        <form class="form-horizontal" id="myForm" role="form" method="post">
+            <div class="form-group ">
+                <label for="name" class="col-sm-2 control-label">商品名称</label>
+                <div class="col-sm-4  ">
+                    <input type="text" class="form-control" id="name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="col-sm-2 control-label">商品类型:</label>
+                <div class="col-sm-4">
+                    <select class="form-control" id="zhse">
+                        <option>黄金</option>
+                        <option selected>白银</option>
+                        <option>黄铜</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="pwd" class="col-sm-2 control-label">盈利率比例</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="pwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="begin" class="col-sm-2 control-label">交易开始时间</label>
+                <div class="col-sm-4">
+                    <div class='input-group date ' id="head-datetimepicker">
+                        <input type='text' id="begin" class="form-control "/>
+                        <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="begin" class="col-sm-2 control-label">交易结束时间</label>
+                <div class="col-sm-4">
+                    <div class='input-group date ' id="tail-datetimepicker">
+                        <input type='text' id="begin" class="form-control "/>
+                        <span class="input-group-addon"> <span class="glyphicon glyphicon-time"></span> </span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-4">
+                    <button type="button" class="btn btn-primary" data-target="#modal" data-toggle="modal">修改</button>
+                    <button type="button" class="btn btn-default col-sm-offset-1" ui-sref="weipan.goods.list">返回
+                    </button>
+                </div>
+            </div>
+        </form><!-- 水平表单结束 -->
+    </div>
+
+
+</div><!-- 面板结束 -->
+
+<!-- 弹出删除确认框 -->
+<!-- 默认先接受点击事件,再弹出模态框 -->
+<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">确定删除吗</h4>
+            </div>
+            <div class="modal-body">
+                <button type="button" class="btn btn-default  col-md-offset-9" data-dismiss="modal"
+                        ng-click="delete(deleteModel)">确定
+                </button>
+                <button type="button" class="btn btn-primary " data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div><!-- 模态框结束 -->
+
+
+<script type="text/javascript">
+    $(function () {
+        var today = new Date();
+        today.setHours(0);
+        today.setMinutes(0);
+        today.setSeconds(0);
+        today.setMilliseconds(0);
+        $('#head-datetimepicker').datetimepicker({
+            inline: true,
+            sideBySide: true,
+            defaultDate: today,
+            format: 'HH:mm:SS'
+        });
+        $('#tail-datetimepicker').datetimepicker({
+            inline: true,
+            sideBySide: true,
+            defaultDate: today,
+            format: 'HH:mm:SS'
+        });
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
